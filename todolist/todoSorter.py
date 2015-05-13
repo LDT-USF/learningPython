@@ -26,10 +26,6 @@ for line in fileinput.input():
 fileinput.close()
 
 for i in range(counter):
-     print(todoList[i])
-     
-
-for i in range(counter):
      for j in range(i, counter):
           if(todoList[i][0] < todoList[j][0]):
                swap = todoList[j]
@@ -54,8 +50,13 @@ for i in range(counter):
           else:
                continue
 
+#for i in range(counter):
+#     print(todoList[i])
+
+FH = open("myTodoList", "w")
 
 for i in range(counter):
-     print(todoList[i])
-
+     FH.write(str(todoList[i]).strip('[]'))
+     FH.write("\n")
+FH.close()
 
