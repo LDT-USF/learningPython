@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 
-import sys
+import fileinput
 
-print("We have", len(sys.argv), "arguments")
+for line in fileinput.input():
+     field = line.split(',')
 
-for i in sys.argv:
-     print(i)
+
+     print(field[1])
+     date = list(field[1])
+     print(date[2])
+
+fileinput.close()
