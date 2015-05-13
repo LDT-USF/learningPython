@@ -27,3 +27,35 @@ fileinput.close()
 
 for i in range(counter):
      print(todoList[i])
+     
+
+for i in range(counter):
+     for j in range(i, counter):
+          if(todoList[i][0] < todoList[j][0]):
+               swap = todoList[j]
+               todoList[j] = todoList[i]
+               todoList[i] = swap
+          elif(todoList[i][3] > todoList[j][3]):
+               swap = todoList[j]
+               todoList[j] = todoList[i]
+               todoList[i] = swap
+          elif(todoList[i][3] < todoList[j][3]):
+               continue
+          elif(todoList[i][2] > todoList[j][2]):
+               swap = todoList[j]
+               todoList[j] = todoList[i]
+               todoList[i] = swap
+          elif(todoList[i][2] < todoList[j][2]):
+               continue
+          elif(todoList[i][1] > todoList[j][1]):
+               swap = todoList[j]
+               todoList[j] = todoList[i]
+               todoList[i] = swap
+          else:
+               continue
+
+
+for i in range(counter):
+     print(todoList[i])
+
+
